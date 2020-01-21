@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body{
   font-family: monospace;
@@ -31,18 +30,23 @@ html, body {
 
 }
 
-.square1,
-.square2,
-.square3 {
-/*  float: left; */
-  width: 33.33%;
-  height: 33.33%;
+.square {
+ float: left;
+  /* width: calc(30% - 84px); */
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid lightgray;
   padding: 40px;
   text-align: center;
-  font-weight: bold;
+
 }
 
+.square p {
+  text-align: center;
+  border: 2px solid black;
+  font-weight: bold;
 
+}
 
 .square1 {
   background-color: red;
@@ -54,4 +58,16 @@ html, body {
 
 .square3 {
   background-color: green;
+}
+
+/* clearfix  */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
 }
